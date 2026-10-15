@@ -1,0 +1,4 @@
+string name
+string passwd
+---
+int32 result

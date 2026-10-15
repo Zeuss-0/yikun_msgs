@@ -1,0 +1,17 @@
+int16 VL_MARKER = 0
+int16 V_MARKER = 1
+int16 LANDMARK = 2
+int8 type
+float64 offset_x
+float64 offset_y
+float64 offset_theta
+---
+int16 UNDEFINED = 0
+int16 GOAL_REACHED = 1
+int16 FAILED_TIMEOUT = 2
+int16 FAILED_COLLISION = 3
+int16 INVALID_GOAL = 4
+int16 GOAL_CANCELED = 5
+int8 result
+---
+int8 state

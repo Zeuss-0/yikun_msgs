@@ -1,0 +1,7 @@
+int8 cmd            # 1:读取DI  2:设置DO  3:等待DI  
+int8 number         # IO口编号从0开始
+int8 value          # IO值 0/1 (cmd为2和3时有效)
+float64 duration    #预留
+---
+int8 result
+string description

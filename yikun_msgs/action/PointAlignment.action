@@ -1,0 +1,21 @@
+#goal definition
+bool enable
+uint32 point_id
+int32 data
+---
+#result definition
+int8 PENDING    = 0 #待办的
+int8 ACTIVE     = 1 #现行的
+int8 PREEMPTED  = 2 #抢占完成
+int8 SUCCEEDED  = 3 #成功
+int8 ABORTED    = 4 #中止
+int8 REJECTED   = 5 #拒绝
+int8 PREEMPTING = 6 #抢占中
+int8 RECALLING  = 7 #召回中
+int8 RECALLED   = 8 #召回完成
+int8 LOST       = 9 #丢失
+int8 result
+string description
+---
+#feedback
+int8 state

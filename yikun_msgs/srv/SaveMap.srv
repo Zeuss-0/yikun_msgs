@@ -1,0 +1,6 @@
+bool enable
+string name
+int64 session_id
+---
+int64 result
+string description

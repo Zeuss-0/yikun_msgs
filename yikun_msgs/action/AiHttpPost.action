@@ -1,0 +1,26 @@
+#goal definition
+string address          #HTTP通信地址，eg:http://192.168.99.31:8100/detect_control_box/switch
+string img_path         #图片存储路径，  eg：/detect_control_box/img.jpg
+string assist_id        #机器人拍摄的点位，eg：03
+string detect_id        #本次识别的唯一标识符，eg：202104081529
+uint32 frequency        #最大尝试次数或最长时间（使用）
+uint32 model_fre        #尝试模式选择。0：时间  1：次数（使用）
+uint32 time_interval    #两次重试间隔  单位：秒 （新增）
+---
+#result definition
+int8 PENDING    = 0
+int8 ACTIVE     = 1
+int8 PREEMPTED  = 2
+int8 SUCCEEDED  = 3
+int8 ABORTED    = 4
+int8 REJECTED   = 5
+int8 PREEMPTING = 6
+int8 RECALLING  = 7
+int8 RECALLED   = 8
+int8 LOST       = 9
+int8 TRYING     = 10
+int8 result
+int8 reason     #0:成功   1:http请求失败   2:ai返回结果失败
+---
+#feedback
+int8 state		#返回当前任务状态。正在执行：ACTIVE， 正在尝试：TRYING等

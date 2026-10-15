@@ -1,0 +1,7 @@
+int8 cmd
+#1-	出站
+#2-	入站
+#3-	车体控制申请
+---
+int8 code
+string desc

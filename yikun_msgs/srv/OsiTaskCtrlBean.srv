@@ -1,0 +1,14 @@
+int8 cmd
+# 1 执行;
+# 2 停止;
+# 3 暂停;
+# 4 恢复;
+string path
+# 点序列 1,2,3,4,5,6,7
+int8 onlyDelayAction
+# 0 完整执行
+# 1 只执行延时动作
+int32 taskId
+#巡检任务号
+---
+int8 result

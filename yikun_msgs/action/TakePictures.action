@@ -1,0 +1,32 @@
+#goal definition
+int8   camera_type     #1:使用可见光摄像头拍照   2:使用热成像摄像头拍照   3:两个都各拍一张
+string address  	   #用于存储地址，FTP地址或本地地址 本地储存地址格式"/home/username/floldername/"最后需要以"/"结尾.若文件夹不存不会拍照保存.
+                       #ftp储存地址格式(假设ftp服务器用户名为uftp):存在服务器根目录"/home/uftp/"则address为空即可(空格也不要有),存在"/home/uftp/test/"目录则设为"test"(不需要以/结尾)
+string filename        #照片文件名,不需后缀,后缀名为".jpeg",因为错误后缀会导致程序崩溃,所以后缀会自动补充.
+string filename_add    #当camera_type=2时此参数有效,为保存的热成像摄像头的照片名
+int8   overwrite       #是否覆盖同名文件. 0:不覆盖 1:覆盖.(若存在同名文件且不覆盖则不会拍照保存,只有保存在本地时有效,存在ftp服务器时若存在同名会直接覆盖,详情查看result.description返回信息)
+uint32 model_add	   #存储模式选择。0：FTP  1：本地 （以后可能其他，预留状态）
+uint32 frequency       #最大尝试次数或最长时间
+uint32 model_fre       #尝试模式选择。0：时间  1：次数
+uint32 time_interval   #两次重试时间间隔  单位:s
+string detect_id            #绵阳巡检新增，用于温度上传
+int8   distance                #设置拍照距离，提高温度检测的准确性
+---
+#result definition
+int8 PENDING    = 0
+int8 ACTIVE     = 1
+int8 PREEMPTED  = 2
+int8 SUCCEEDED  = 3
+int8 ABORTED    = 4
+int8 REJECTED   = 5
+int8 PREEMPTING = 6
+int8 RECALLING  = 7
+int8 RECALLED   = 8
+int8 LOST       = 9
+int8 TRYING     = 10
+int8 result
+int8 reason     #0:成功 1:登陆相机失败(无法与相机通信) 2:相机拍照失败 3:文件夹不存在(本地) 4:文件已存在(本地) 5:ftp服务器连接失败 6:文件夹不存在(ftp) 7:上传文件到ftp服务器失败
+string description   #描述文件是否储存成功
+---
+#feedback
+int8 state

@@ -1,0 +1,20 @@
+#goal
+int32 num        #预设点序号(1-255)
+int8 time       #设置到达预设点过程程序睡眠时间,单位:s
+---
+#result
+int8 PENDING    = 0
+int8 ACTIVE     = 1
+int8 PREEMPTED  = 2
+int8 SUCCEEDED  = 3
+int8 ABORTED    = 4
+int8 REJECTED   = 5
+int8 PREEMPTING = 6
+int8 RECALLING  = 7
+int8 RECALLED   = 8
+int8 LOST       = 9
+int8 result
+bool finish     #成功下发指令到相机等待goal->time秒后返回true,失败返回false
+---
+#feedback
+int8 num        #返回点序列号

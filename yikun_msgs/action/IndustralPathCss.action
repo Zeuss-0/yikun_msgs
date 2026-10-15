@@ -1,0 +1,24 @@
+#goal definition
+bool enable
+uint32 map_id
+uint32 speed_model
+uint32 motion_model
+uint32 parking_type  #任务取消停车的类型，0代表不采取措施;1立即停车;2代表就近号点停车
+yikun_msgs/PosCss[] data
+---
+#result definition
+int8 PENDING    = 0
+int8 ACTIVE     = 1
+int8 PREEMPTED  = 2
+int8 SUCCEEDED  = 3
+int8 ABORTED    = 4
+int8 REJECTED   = 5
+int8 PREEMPTING = 6
+int8 RECALLING  = 7
+int8 RECALLED   = 8
+int8 LOST       = 9
+int8 result
+string description
+---
+#feedback
+int8 state

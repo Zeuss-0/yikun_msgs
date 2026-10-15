@@ -1,0 +1,9 @@
+#goal
+bool enable            #备用，是否开始
+uint32 start_point        #需要搜索的起始点的“拓扑号”   eg：2
+uint32 end_point          #需要搜索的终止点的“拓扑号”   eg：5
+---
+#result
+bool result            #搜索结果标志位（成功、还是失败或者其他）
+int32[] search_points  #搜索的最终结果（实际上就是数组，如果搜索失败，就是空）
+string description      #详细的描述信息，可以为空

@@ -1,0 +1,14 @@
+#goal definition
+string map_name
+int16 session_id
+---
+#result definition
+int16 UNDEFINED = 0
+int16 SAVED = 1
+int16 FAILED_TIMEOUT = 2
+int16 FAILED = 4
+int16 SAVE_CANCELED = 5
+int8 result
+---
+#feedback
+nav_msgs/MapMetaData data

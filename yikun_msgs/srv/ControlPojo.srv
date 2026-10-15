@@ -1,0 +1,6 @@
+int32 switchFlag
+string userId
+string firstName
+string lastName
+---
+int32 result
