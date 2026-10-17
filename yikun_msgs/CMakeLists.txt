@@ -9,10 +9,13 @@ project(yikun_msgs)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   actionlib
+  actionlib_msgs
+  geometry_msgs
   message_generation
+  nav_msgs
   roscpp
   rospy
-  nav_msgs
+  std_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -99,16 +102,19 @@ add_action_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  std_msgs
-  nav_msgs
   actionlib_msgs
+  geometry_msgs
+  nav_msgs
+  std_msgs
 )
 
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES yikun_msgs
-#  CATKIN_DEPENDS message_generation roscpp rospy
-#  DEPENDS system_lib
+  CATKIN_DEPENDS
+    actionlib_msgs
+    geometry_msgs
+    message_runtime
+    nav_msgs
+    std_msgs
 )
 
 include_directories(
