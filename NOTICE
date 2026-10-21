@@ -1,0 +1,19 @@
+yikun_msgs
+Copyright 2019 Shanghai Yikun Electrical Engineering Co., Ltd.
+
+This package is licensed under the Apache License, Version 2.0.
+
+Some navigation interfaces were adapted from BSD-licensed ROS packages.
+Only the package namespace was changed (to yikun_msgs). Those definitions
+remain under their original BSD license:
+
+- move_base_msgs/MoveBase.action
+  -> action/MoveBase.action
+- costmap_2d/VoxelGrid.msg
+  -> msg/VoxelGrid.msg
+- teb_local_planner FeedbackMsg.msg, ObstacleMsg.msg, TrajectoryMsg.msg,
+  and TrajectoryPointMsg.msg
+  -> msg/FeedbackMsg.msg, msg/ObstacleMsg.msg, msg/TrajectoryMsg.msg,
+     msg/TrajectoryPointMsg.msg
+- sbpl_lattice_planner/SBPLLatticePlannerStats.msg
+  -> msg/SBPLLatticePlannerStats.msg

@@ -1,0 +1,31 @@
+# Editor and OS junk. .vscode/settings.json in this repo pointed at a
+# machine-specific Windows path and is not part of the catkin package.
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# In-tree catkin / colcon products. The package itself lives in yikun_msgs/.
+build/
+devel/
+install/
+log/
+logs/
+.catkin_workspace
+
+# CMake leftovers from an in-tree configure
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+install_manifest.txt
